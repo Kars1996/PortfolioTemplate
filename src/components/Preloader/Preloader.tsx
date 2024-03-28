@@ -27,27 +27,31 @@ const greetings = [
     "· Hello!",
 ];
 
-export default function () {
+export default function ({ text = true }) {
     const [greetingIndex, setGreetingIndex] = useState(0);
     const [showPreloader, setShowPreloader] = useState(true);
     const [showImage, setShowImage] = useState(false);
     const [showWipeAnimation, setShowWipeAnimation] = useState(false);
 
-    useEffect(() => {
-        if (greetings[greetingIndex] !== "· Hello!") {
-            const timer = setTimeout(() => {
-                const nextIndex = (greetingIndex + 1) % greetings.length;
-                setGreetingIndex(nextIndex);
-            }, 100);
+    if (text) {
+        useEffect(() => {
+            if (greetings[greetingIndex] !== "· Hello!") {
+                const timer = setTimeout(() => {
+                    const nextIndex = (greetingIndex + 1) % greetings.length;
+                    setGreetingIndex(nextIndex);
+                }, 100);
 
-            return () => clearTimeout(timer);
-        }
-    }, [greetingIndex]);
+                return () => clearTimeout(timer);
+            }
+        }, [greetingIndex]);
+    }
 
     useEffect(() => {
         const timeout = setTimeout(() => {
             setShowPreloader(false);
-            setShowWipeAnimation(true);
+            if (text) {
+                setShowWipeAnimation(true);
+            }
         }, 2000);
         return () => clearTimeout(timeout);
     }, []);
@@ -56,9 +60,20 @@ export default function () {
         <div
             className={`fixed top-0 left-0 w-full z-[10000] h-full overflow-hidden flex flex-col items-center justify-center ${
                 styles.preloaderContainer
-            } ${showPreloader ? "visible" : "invisible"} ${showWipeAnimation ? styles.wipeAnimation : ""}`}
+            } ${showPreloader ? "visible" : "invisible"} ${
+                showWipeAnimation ? styles.wipeAnimation : ""
+            }`}
         >
-            <h1 className="text-white">{greetings[greetingIndex]}</h1>
+            {!text ? (
+                <img
+                    src="https://cdn3.kars.bio/assets/pfp.gif"
+                    alt="PFP"
+                    className="rounded-full mb-4 shadow-lg"
+                    style={{ width: "75px", height: "75px" }}
+                />
+            ) : (
+                <h1 className="text-white">{greetings[greetingIndex]}</h1>
+            )}
         </div>
     );
 }

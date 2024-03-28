@@ -1,3 +1,5 @@
+import Preloader from "@/components/Preloader/Preloader"
+
 /*
 Copyright © 2024 Kars (github.com/kars1996)
 
@@ -7,6 +9,8 @@ Contact Kars for any enquieries
 
 export default function () {
     return (
+        <>
+        <Preloader />
         <div
             className="h-screen w-screen text-black flex items-center justify-center"
             style={{
@@ -64,6 +68,7 @@ export default function () {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

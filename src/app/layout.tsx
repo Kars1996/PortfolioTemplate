@@ -41,7 +41,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${inter.className} __kars`}>
-                <Preloader />
+                
                 <main className="_kars">{children}</main>
                 <Console />
             </body>
