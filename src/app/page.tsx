@@ -12,12 +12,12 @@ export default function () {
     return (
         <>
         <Preloader />
-        <Navbar />
+        {/* <Navbar /> */}
         <div
             className="h-screen w-screen text-black flex items-center justify-center"
             style={{
                 backgroundImage:
-                    "url('https://source.unsplash.com/ZK1HZiMZ2EM/1920x1080')",
+                    "url('https://wallpapercave.com/wp/wp7542081.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
@@ -27,11 +27,7 @@ export default function () {
                     Kars
                 </h1>
 
-                <SocialLink href="https://github.com/kars1996/Template">
-                    Template Link
-                </SocialLink>
-
-                <p className="opacity-75 text-xl">A NextJS Template</p>
+                <p className="opacity-75 text-xl">Work in Progress</p>
                 <div className="flex justify-center">
                     <a href="https://kars.bio" target="_blank">
                         <svg

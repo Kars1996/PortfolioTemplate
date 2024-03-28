@@ -15,7 +15,7 @@ export default function () {
                 className="h-screen w-screen text-black flex items-center justify-center"
                 style={{
                     backgroundImage:
-                        "url('https://source.unsplash.com/ZK1HZiMZ2EM/1920x1080')",
+                        "url('https://wallpapercave.com/wp/wp7542081.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}

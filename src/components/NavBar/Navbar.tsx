@@ -42,7 +42,7 @@ export default function () {
                             <ul className="space-y-2 list-none md:space-y-0 md:ml-auto items-center md:inline-flex justify-center text-center md:text-left gap-3">
                                 <li>
                                     <a
-                                        href="/buy"
+                                        href="#"
                                         className="lg:py-10 text-xs text-white hover:text-blue-400"
                                     >
                                         About
@@ -50,7 +50,7 @@ export default function () {
                                 </li>
                                 <li>
                                     <a
-                                        href="/partners"
+                                        href="#"
                                         className="lg:py-10 text-xs text-white hover:text-blue-400"
                                     >
                                         Experience
@@ -58,7 +58,7 @@ export default function () {
                                 </li>
                                 <li>
                                     <a
-                                        href="/auth/register"
+                                        href="#"
                                         className="py-1.5 px-4 border focus:ring-2 text-xs rounded-full border-transparent bg-white hover:bg-white/10 text-black duration-200 focus:ring-offset-2 focus:ring-white hover:text-white inline-flex items-center justify-center ring-1 ring-transparent lg:ml-auto"
                                     >
                                         Contact Me
