@@ -58,7 +58,7 @@ export default function ({ text = true }) {
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full z-[10000] h-full overflow-hidden flex flex-col items-center justify-center ${
+            className={`fixed top-0 left-0 w-full z-[1000] h-full overflow-hidden flex flex-col items-center justify-center ${
                 styles.preloaderContainer
             } ${showPreloader ? "visible" : "invisible"} ${
                 showWipeAnimation ? styles.wipeAnimation : ""

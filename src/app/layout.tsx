@@ -13,6 +13,7 @@ import Console from "../modules/Console/Console";
 import { newMeta } from "@/modules/meta";
 import Preloader from "@/components/Preloader/Preloader"
 import Aos from  "@/modules/Aos/aos"
+import Navbar from "@/components/NavBar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

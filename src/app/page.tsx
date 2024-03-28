@@ -1,4 +1,5 @@
 import Preloader from "@/components/Preloader/Preloader"
+import Navbar from "@/components/NavBar/Navbar";
 
 /*
 Copyright © 2024 Kars (github.com/kars1996)
@@ -11,6 +12,7 @@ export default function () {
     return (
         <>
         <Preloader />
+        <Navbar />
         <div
             className="h-screen w-screen text-black flex items-center justify-center"
             style={{
