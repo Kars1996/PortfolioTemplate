@@ -1,0 +1,18 @@
+
+.preloaderContainer {
+    background-color: #1c1c1c;
+    z-index: 9999;
+}
+
+@keyframes wipe {
+    100% {
+        clip-path: inset(0 0 100% 0);
+    }
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.wipeAnimation {
+    animation: wipe 1s backwards;
+}

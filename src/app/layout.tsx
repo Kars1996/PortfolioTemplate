@@ -11,6 +11,7 @@ Contact Kars for any enquieries
 
 import Console from "../modules/Console/Console";
 import { newMeta } from "@/modules/meta";
+import Preloader from "@/components/Preloader/Preloader"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${inter.className} __kars`}>
+                <Preloader />
                 <main className="_kars">{children}</main>
                 <Console />
             </body>
