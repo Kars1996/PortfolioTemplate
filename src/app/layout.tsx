@@ -12,6 +12,7 @@ Contact Kars for any enquieries
 import Console from "../modules/Console/Console";
 import { newMeta } from "@/modules/meta";
 import Preloader from "@/components/Preloader/Preloader"
+import Aos from  "@/modules/Aos/aos"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,7 +42,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${inter.className} __kars`}>
-                
+                <Aos />
                 <main className="_kars">{children}</main>
                 <Console />
             </body>
