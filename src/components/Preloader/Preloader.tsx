@@ -11,6 +11,8 @@ Contact Kars for any enquieries
 
 const greetings = [
     "· Hey!",
+    "· Hey!",
+    "· Hey!",
     "· Hola!",
     "· Привет!",
     "· مرحبا!",
@@ -30,31 +32,33 @@ const greetings = [
 export default function ({ text = true }) {
     const [greetingIndex, setGreetingIndex] = useState(0);
     const [showPreloader, setShowPreloader] = useState(true);
-    const [showImage, setShowImage] = useState(false);
     const [showWipeAnimation, setShowWipeAnimation] = useState(false);
 
-    if (text) {
-        useEffect(() => {
-            if (greetings[greetingIndex] !== "· Hello!") {
-                const timer = setTimeout(() => {
-                    const nextIndex = (greetingIndex + 1) % greetings.length;
-                    setGreetingIndex(nextIndex);
-                }, 100);
-
-                return () => clearTimeout(timer);
-            }
-        }, [greetingIndex]);
-    }
-
     useEffect(() => {
-        const timeout = setTimeout(() => {
-            setShowPreloader(false);
-            if (text) {
-                setShowWipeAnimation(true);
-            }
-        }, 2000);
-        return () => clearTimeout(timeout);
-    }, []);
+        if (text) {
+            // useEffect(() => {
+                if (greetings[greetingIndex] !== "· Hello!") {
+                    const timer = setTimeout(() => {
+                        const nextIndex =
+                            (greetingIndex + 1) % greetings.length;
+                        setGreetingIndex(nextIndex);
+                    }, 125);
+
+                    return () => clearTimeout(timer);
+                }
+            // }, [greetingIndex]);
+        }
+
+        // useEffect(() => {
+            const timeout = setTimeout(() => {
+                setShowPreloader(false);
+                if (text) {
+                    setShowWipeAnimation(true);
+                }
+            }, 2000);
+            return () => clearTimeout(timeout);
+        // }, []);
+    });
 
     return (
         <div
@@ -72,9 +76,12 @@ export default function ({ text = true }) {
                     alt="PFP"
                     className="rounded-full mb-4 shadow-lg"
                     style={{ width: "75px", height: "75px" }}
+                    data-aos="fade-down"
                 />
             ) : (
-                <h1 className="text-white">{greetings[greetingIndex]}</h1>
+                <h1 data-aos="fade-down" className="text-white">
+                    {greetings[greetingIndex]}
+                </h1>
             )}
             {/* </div> */}
         </div>
