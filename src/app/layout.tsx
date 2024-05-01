@@ -44,7 +44,7 @@ export default function RootLayout({
             </head>
             <body className={`${inter.className} __kars`}>
                 <Aos />
-                <main className="_kars">{children}</main>
+                <main className="_kars bg-[#1c1c1c]">{children}</main>
                 <Console />
             </body>
         </html>
