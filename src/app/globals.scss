@@ -5,7 +5,7 @@
 :root {
     --spacing: 5rem;
     --letter-spacing-multiplier: -0.025;
-
+    
     --transition: .5s ease-in-out;
 }
 
@@ -17,18 +17,39 @@
 
 
 ._kars {
-    @apply relative overflow-hidden z-0 w-full flex flex-col justify-center items-center;
+    @apply relative overflow-hidden z-0 w-full flex flex-col justify-center items-center bg-black;
 
     >* {
         @apply px-[var(--spacing)];
     }
 }
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-base-color: transparent;
+}
 
+*::-webkit-scrollbar {
+width: 10px; 
+}
+
+*::-webkit-scrollbar-track {
+background: #fff; 
+border-radius: 10px; 
+}
+
+*::-webkit-scrollbar-thumb {
+background: #ccc; 
+border-radius: 10px; 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+background: #999;
+}
 
 body {
     // @apply text-black bg-white grid place-items-center;
-
+    scroll-behavior: smooth;
     //If you're not using Locomotive Scroll, remove the line below.
     // @apply lg:overflow-hidden;
 }

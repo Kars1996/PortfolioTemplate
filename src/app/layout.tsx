@@ -11,8 +11,8 @@ Contact Kars for any enquieries
 
 import Console from "../modules/Console/Console";
 import { newMeta } from "@/modules/meta";
-import Preloader from "@/components/Preloader/Preloader"
-import Aos from  "@/modules/Aos/aos"
+import Preloader from "@/components/Preloader/Preloader";
+import Aos from "@/modules/Aos/aos";
 import Navbar from "@/components/NavBar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +20,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Kars Template",
     description: ":D",
-  };
+};
 
 export default function RootLayout({
     children,
@@ -44,7 +44,11 @@ export default function RootLayout({
             </head>
             <body className={`${inter.className} __kars`}>
                 <Aos />
-                <main className="_kars">{children}</main>
+
+                <main className="_kars">
+                    <Preloader />
+                    {children}
+                </main>
                 <Console />
             </body>
         </html>
