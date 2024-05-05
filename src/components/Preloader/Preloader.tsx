@@ -37,26 +37,25 @@ export default function ({ text = true }) {
     useEffect(() => {
         if (text) {
             // useEffect(() => {
-                if (greetings[greetingIndex] !== "· Hello!") {
-                    const timer = setTimeout(() => {
-                        const nextIndex =
-                            (greetingIndex + 1) % greetings.length;
-                        setGreetingIndex(nextIndex);
-                    }, 125);
+            if (greetings[greetingIndex] !== "· Hello!") {
+                const timer = setTimeout(() => {
+                    const nextIndex = (greetingIndex + 1) % greetings.length;
+                    setGreetingIndex(nextIndex);
+                }, 125);
 
-                    return () => clearTimeout(timer);
-                }
+                return () => clearTimeout(timer);
+            }
             // }, [greetingIndex]);
         }
 
         // useEffect(() => {
-            const timeout = setTimeout(() => {
-                setShowPreloader(false);
-                if (text) {
-                    setShowWipeAnimation(true);
-                }
-            }, 2000);
-            return () => clearTimeout(timeout);
+        const timeout = setTimeout(() => {
+            setShowPreloader(false);
+            if (text) {
+                setShowWipeAnimation(true);
+            }
+        }, 2000);
+        return () => clearTimeout(timeout);
         // }, []);
     });
 
@@ -79,7 +78,10 @@ export default function ({ text = true }) {
                     data-aos="fade-down"
                 />
             ) : (
-                <h1 data-aos="fade-down" className="text-white">
+                <h1
+                    data-aos="fade-down"
+                    className="text-white text-lg lg:text-[4rem]"
+                >
                     {greetings[greetingIndex]}
                 </h1>
             )}
