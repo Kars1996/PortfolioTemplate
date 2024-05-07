@@ -54,7 +54,7 @@ export default function ({ text = true }) {
             if (text) {
                 setShowWipeAnimation(true);
             }
-        }, 2000);
+        }, 1350);
         return () => clearTimeout(timeout);
         // }, []);
     });
