@@ -2,6 +2,8 @@
 
 This is a portfolio template built with Next.js and Tailwind CSS, with a minimalist elegant design. It includes a preloader for smooth loading transitions and various reusable components to make building your portfolio a breeze. Check out a **Live Preview** [Here](https://template.karstest.pro)
 
+Consider giving it a **Star** to motivate me to make more projects! ❤️
+
 ### Features 🌟
 - **Next.js:** Utilizes the power of Next.js for server-side rendering and efficient routing.
 - **Tailwind CSS:** Fully customizable styling using Tailwind CSS utility classes.
